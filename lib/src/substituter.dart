@@ -63,7 +63,7 @@ class PostgreSQLFormat {
     final iterator = RuneIterator(fmtString);
 
     iterator.moveNext();
-    while (iterator.current != null) {
+    while (iterator.current != null && iterator.current != -1) {
       if (currentPtr == null) {
         if (iterator.current == _atSignCodeUnit) {
           currentPtr =
